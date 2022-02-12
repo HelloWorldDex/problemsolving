@@ -12,27 +12,6 @@ public class NodeTraversal {
 
     private static SingleNode arrangeOnScore(SingleNode men, SingleNode women){
         //Write your code here
-        SingleNodeList arrangedNodes = new SingleNodeList();
-        SingleNode previousMaxScore;
-
-        while(men.next != null && women.next != null){
-            if(men.score > women.score){
-                arrangedNodes.addNode(men.name, men.score);
-            }
-            else{
-                arrangedNodes.addNode(women.name, women.score);
-            }
-        }
-
-        while(men != null && men.next != null){
-            if(men.score > women.score){
-                arrangedNodes.addNode(men.name, men.score);
-            }
-            else{
-                arrangedNodes.addNode(women.name, women.score);
-            }
-        }
-
         return null;
     }
 
