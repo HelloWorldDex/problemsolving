@@ -12,6 +12,27 @@ public class NodeTraversal {
 
     private static SingleNode arrangeOnScore(SingleNode men, SingleNode women){
         //Write your code here
+        SingleNodeList arrangedNodes = new SingleNodeList();
+        SingleNode previousMaxScore;
+
+        while(men.next != null && women.next != null){
+            if(men.score > women.score){
+                arrangedNodes.addNode(men.name, men.score);
+            }
+            else{
+                arrangedNodes.addNode(women.name, women.score);
+            }
+        }
+
+        while(men != null && men.next != null){
+            if(men.score > women.score){
+                arrangedNodes.addNode(men.name, men.score);
+            }
+            else{
+                arrangedNodes.addNode(women.name, women.score);
+            }
+        }
+
         return null;
     }
 
@@ -31,8 +52,8 @@ public class NodeTraversal {
 
     private static SingleNode seedMenData(){
         SingleNodeList list = new SingleNodeList();
-        list.addNode("Amar", 2)
-            .addNode("Rajesh", 6)
+        list.addNode("Amar", 6)
+            .addNode("Rajesh", 3)
             .addNode("Pankaj", 1);
 
         return list.head;
